@@ -1,0 +1,40 @@
+[user]
+	email = clear2codeu@gmail.com
+	name = Keith Mattix
+[github]
+	user = mystic77892@gmail.com
+	token = 47f516c74c8b16ce2baa9347ac57aa83d14d36a9
+[color]
+    ui = auto
+[color "branch"]
+    current = blue reverse
+    local = blue
+    remote = green
+[color "diff"]
+    meta = blue bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+  whitespace = red reverse
+[color "status"]
+    added = blue
+    changed = green
+    untracked = cyan
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[alias]
+  ci = commit
+  cm = commit -am
+  br = branch
+  co = checkout
+  lp = log -p
+  who = shortlog -n -s --no-merges
+  undo = reset --hard
+  lc = log ORIG_HEAD.. --stat --no-merges
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lf = log --pretty=fuller
+  cleanup = !git gc && git remote prune origin
+  fork = remote add -f
+  ghpages = !git pull && git co gh-pages && git merge master && git push && git co master
+[push]
+	default = simple
